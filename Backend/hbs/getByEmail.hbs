@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    {{#if user}}
+            <div>
+                <strong>Name  : </strong> {{user.name}} <br>
+                <strong>Email : </strong> {{user.email}} 
+            </div>
+            <hr>
+    {{else}}
+        <h2>No users found</h2>
+    {{/if}}
+</body>
+</html>
