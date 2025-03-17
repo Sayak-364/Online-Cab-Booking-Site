@@ -5,7 +5,7 @@ const { OAuth2Client } = require('google-auth-library');
 const jwt = require('jsonwebtoken');
 
 const key="secret_key"
-const client = new OAuth2Client('1081870502893-onb71taj1m6vqhme2e8q3q8q35fmhkd7.apps.googleusercontent.com');
+const client = new OAuth2Client('abc.apps.googleusercontent.com');
 
 const generateToken = (user) => {
     return jwt.sign({
@@ -94,7 +94,7 @@ router.post('/auth/google/register', async (req, res) => {
         // Verify the Google ID token
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: '1081870502893-onb71taj1m6vqhme2e8q3q8q35fmhkd7.apps.googleusercontent.com',
+            audience: 'abc.apps.googleusercontent.com',
         });
         const payload = ticket.getPayload();
 
@@ -135,7 +135,7 @@ router.post('/auth/google/login', async (req, res) => {
     try {
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: '1081870502893-onb71taj1m6vqhme2e8q3q8q35fmhkd7.apps.googleusercontent.com',
+            audience: 'abc.apps.googleusercontent.com',
         });
         const payload = ticket.getPayload();
 
