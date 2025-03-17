@@ -28,8 +28,8 @@ router.post('/send', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'bsayak50@gmail.com', // Your Gmail address
-                pass: 'ueyp gxfe apar vgfr', // Your generated app password
+                user: 'abc@gmail.com', // Your Gmail address
+                pass: 'abc', // Your generated app password
             }
         });
 
@@ -37,9 +37,9 @@ router.post('/send', async (req, res) => {
         const mailOptions = {
             from: {
                 name: 'CAR BOOK',
-                address: 'bsayak50@gmail.com', // Your Gmail address
+                address: 'abc@gmail.com', // Your Gmail address
             },
-            to: 'bhattacharyas364@gmail.com', // List of receivers
+            to: 'xyz@gmail.com', // List of receivers
             subject: 'Change Password Request',
             html: htmlContent, // HTML body
         };
